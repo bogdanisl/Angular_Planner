@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'plannerApp';
+  name:string=" Bohdan";
+  age:number = 17;
+  isCheck:boolean = true;
 }

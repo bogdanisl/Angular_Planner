@@ -5,9 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'plannerApp';
-  name:string=" Bohdan";
-  age:number = 17;
+  title = 'empty-project';
+  name:string = 'Mykola';
   isCheck:boolean = true;
+  age:number = 17;
 }

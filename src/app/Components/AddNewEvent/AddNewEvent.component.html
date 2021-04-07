@@ -1,0 +1,19 @@
+
+<div class="container">
+  <form #addEventForm="ngForm" (ngSubmit)="onSubmit(addEventForm)">
+    <h2>Add new event:</h2>
+    <div class="form-group">
+      <input [(ngModel)]="model.title" type="text" class="form-control" id="txtTitle" name="txtTitle"  placeholder="Enter title">
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="model.description" type="text" class="form-control" id="txtTitle" name="txtTitle"  placeholder="Enter description">
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="model.date" type="date" class="form-control" id="txtDate" name="txtDate"  placeholder="Enter date">
+    </div>
+    <div class="form-group">
+      <input [(ngModel)]="model.image" type="text" class="form-control" id="txtImage" name  ="txtImage" placeholder="Enter image url">
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
+</div>

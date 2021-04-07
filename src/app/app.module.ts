@@ -1,26 +1,46 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
-import { AddEventComponent } from './Components/AddEvent/AddEvent.component';
-import { EventInfoComponent } from './Components/EventInfo/EventInfo.component';
-import { EventItemComponent } from './Components/EventItem/EventItem.component';
-import { EventListComponent } from './Components/EventList/EventList.component';
-import { NavbarComponent } from './Components/Navbar/Navbar.component';
+import { EventItemComponent } from './components/EventItem/EventItem.component';
+import { ListEventsComponent } from './components/ListEvents/ListEvents.component';
+import { NavbarComponent } from './components/Navbar/Navbar.component';
+import { EventDetailsComponent } from './components/EventDetails/EventDetails.component';
+import { AddNewEventComponent } from './components/AddNewEvent/AddNewEvent.component';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/Home/Home.component';
+import { Page404Component } from './components/Page404/Page404.component';
+import { NotifierModule } from 'angular-notifier';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventItemComponent,
-    EventListComponent,
+    ListEventsComponent,
     NavbarComponent,
-    AddEventComponent,
-    EventInfoComponent
+    EventDetailsComponent,
+    AddNewEventComponent,
+    HomeComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    AppRoutingModule,
+    NotifierModule.withConfig({
+      position: {
+        horizontal:
+         {position: 'right',},
+         vertical: {position: 'bottom',}
+        }
+      }),
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
